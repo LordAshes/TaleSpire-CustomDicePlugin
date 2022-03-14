@@ -14,7 +14,7 @@ namespace LordAshes
     {
         // Plugin info
         public const string Guid = "org.lordashes.plugins.customdice";
-        public const string Version = "1.0.0.0";
+        public const string Version = "1.1.0.0";
 
         // Configuration
         private Dictionary<string, DieConfig> diceConfig { get; set; } = new Dictionary<string, DieConfig>();
@@ -40,16 +40,16 @@ namespace LordAshes
         {
             UnityEngine.Debug.Log("Lord Ashes Custom Dice Plugin Active.");
 
-            if (FileAccessPlugin.File.Exists("dice01")) { assetBundles[0] = FileAccessPlugin.AssetBundle.Load("dice01"); } else { assetBundles[0] = null; Debug.LogError("Could not locate asset 'dice01' in TaleSpire_CustomData/Minis or a plugin CustomData/Minis folder"); }
-            if (FileAccessPlugin.File.Exists("dice02")) { assetBundles[1] = FileAccessPlugin.AssetBundle.Load("dice02"); } else { assetBundles[1] = null; }
-            if (FileAccessPlugin.File.Exists("dice03")) { assetBundles[2] = FileAccessPlugin.AssetBundle.Load("dice03"); } else { assetBundles[2] = null; }
-            if (FileAccessPlugin.File.Exists("dice04")) { assetBundles[3] = FileAccessPlugin.AssetBundle.Load("dice04"); } else { assetBundles[3] = null; }
-            if (FileAccessPlugin.File.Exists("dice05")) { assetBundles[4] = FileAccessPlugin.AssetBundle.Load("dice05"); } else { assetBundles[4] = null; }
-            if (FileAccessPlugin.File.Exists("dice06")) { assetBundles[5] = FileAccessPlugin.AssetBundle.Load("dice06"); } else { assetBundles[5] = null; }
-            if (FileAccessPlugin.File.Exists("dice07")) { assetBundles[6] = FileAccessPlugin.AssetBundle.Load("dice07"); } else { assetBundles[6] = null; }
-            if (FileAccessPlugin.File.Exists("dice08")) { assetBundles[7] = FileAccessPlugin.AssetBundle.Load("dice08"); } else { assetBundles[7] = null; }
-            if (FileAccessPlugin.File.Exists("dice09")) { assetBundles[8] = FileAccessPlugin.AssetBundle.Load("dice09"); } else { assetBundles[8] = null; }
-            if (FileAccessPlugin.File.Exists("dice10")) { assetBundles[9] = FileAccessPlugin.AssetBundle.Load("dice10"); } else { assetBundles[9] = null; }
+            if (FileAccessPlugin.File.Exists("dice01.die")) { assetBundles[0] = FileAccessPlugin.AssetBundle.Load("dice01.die"); } else { assetBundles[0] = null; Debug.LogError("Could not locate asset 'dice01.die' in TaleSpire_CustomData/Minis or a plugin CustomData/Minis folder"); }
+            if (FileAccessPlugin.File.Exists("dice02.die")) { assetBundles[1] = FileAccessPlugin.AssetBundle.Load("dice02.die"); } else { assetBundles[1] = null; }
+            if (FileAccessPlugin.File.Exists("dice03.die")) { assetBundles[2] = FileAccessPlugin.AssetBundle.Load("dice03.die"); } else { assetBundles[2] = null; }
+            if (FileAccessPlugin.File.Exists("dice04.die")) { assetBundles[3] = FileAccessPlugin.AssetBundle.Load("dice04.die"); } else { assetBundles[3] = null; }
+            if (FileAccessPlugin.File.Exists("dice05.die")) { assetBundles[4] = FileAccessPlugin.AssetBundle.Load("dice05.die"); } else { assetBundles[4] = null; }
+            if (FileAccessPlugin.File.Exists("dice06.die")) { assetBundles[5] = FileAccessPlugin.AssetBundle.Load("dice06.die"); } else { assetBundles[5] = null; }
+            if (FileAccessPlugin.File.Exists("dice07.die")) { assetBundles[6] = FileAccessPlugin.AssetBundle.Load("dice07.die"); } else { assetBundles[6] = null; }
+            if (FileAccessPlugin.File.Exists("dice08.die")) { assetBundles[7] = FileAccessPlugin.AssetBundle.Load("dice08.die"); } else { assetBundles[7] = null; }
+            if (FileAccessPlugin.File.Exists("dice09.die")) { assetBundles[8] = FileAccessPlugin.AssetBundle.Load("dice09.die"); } else { assetBundles[8] = null; }
+            if (FileAccessPlugin.File.Exists("dice10.die")) { assetBundles[9] = FileAccessPlugin.AssetBundle.Load("dice10.die"); } else { assetBundles[9] = null; }
 
             setStyleTriggers[0] = Config.Bind("Hotkeys", "Set Style 01", new KeyboardShortcut(KeyCode.Keypad1, KeyCode.LeftControl));
             setStyleTriggers[1] = Config.Bind("Hotkeys", "Set Style 02", new KeyboardShortcut(KeyCode.Keypad2, KeyCode.LeftControl));
